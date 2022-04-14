@@ -1,0 +1,18 @@
+{
+    "name": "codevia/venus-utils",
+    "description": "Venus framework toolbox",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Codevia\\Venus\\Utils\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Vincent Bathelier",
+            "email": "53569029+d9beuD@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}
