@@ -4,8 +4,25 @@ namespace Codevia\Venus\Utils\Http\Request;
 
 use Psr\Http\Message\ServerRequestInterface as Request;
 
-class Validate
+class RequestAnalizer
 {
+    /**
+     * Get pagination query params from the request
+     * 
+     * @param Request $request 
+     * @return array Pagination params
+     */
+    public static function getPagination(Request $request): array
+    {
+        $page = (int) ($request->getQueryParams()['page'] ?? 1);
+        $limit = (int) ($request->getQueryParams()['limit'] ?? 20);
+
+        return [
+            'limit' => $limit,
+            'page' => $page,
+        ];
+    }
+
     /**
      * Verify if the request contains all the required parameters
      * 
@@ -18,7 +35,7 @@ class Validate
         $isValid = true;
 
         foreach ($fields as $field) {
-            if (!isset($request->getParsedBody()[$field])) {
+            if (!array_key_exists($field, $request->getParsedBody())) {
                 $isValid = false;
             }
         }
