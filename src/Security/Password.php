@@ -4,7 +4,6 @@ namespace Codevia\Venus\Utils\Security;
 
 /**
  * Oriented object version of the native PHP password API.
- * @package Codevia\Venus\Security
  */
 class Password
 {
