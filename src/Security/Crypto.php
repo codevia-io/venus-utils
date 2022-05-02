@@ -1,6 +1,6 @@
 <?php
 
-namespace Codevia\PasswordManagerApi\Security;
+namespace Codevia\Venus\Utils\Security;
 
 /**
  * Oriented Object Sodium wrapper
