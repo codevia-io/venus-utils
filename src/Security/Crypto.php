@@ -23,7 +23,7 @@ class Crypto
         return sodium_crypto_aead_xchacha20poly1305_ietf_encrypt($plaintext, '', $nonce, $key);
     }
 
-    public static function decrypt(string $ciphertext, string $key, string $nonce): string
+    public static function decrypt(string $ciphertext, string $key, string $nonce)
     {
         return sodium_crypto_aead_xchacha20poly1305_ietf_decrypt($ciphertext, '', $nonce, $key);
     }
