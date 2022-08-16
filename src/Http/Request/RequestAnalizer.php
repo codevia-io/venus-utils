@@ -30,7 +30,7 @@ class RequestAnalizer
      * @param array $fields The required fields
      * @return bool `true` if all the required parameters are present, `false` otherwise
      */
-    public static function parsedBody(Request $request, array $fields): bool
+    public static function parseBody(Request $request, array $fields): bool
     {
         $isValid = true;
 
